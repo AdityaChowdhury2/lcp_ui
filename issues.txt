@@ -1,0 +1,6 @@
+CLRA-PE missing informations at the alc end clra-pe application menu
+1. mobile no of pe //not to do now
+2. address additional details (dist, sub, block/munc, type, word, ps , pin) missing in view details page 
+3. Name and location of the Establishment -> Location of the Establishment (loc_e_name)
+4. Registered Office address of the Establishment-> Postal Address of the Establishment (e_postal_address)
+5. Application is sent back for rectification. Kindly modify disapproved fields and re-submit the application. -> Application is sent back for rectification.

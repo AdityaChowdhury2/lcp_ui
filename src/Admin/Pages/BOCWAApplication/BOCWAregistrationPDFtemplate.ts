@@ -1,0 +1,583 @@
+import { IMAGE_BASE } from '@/constants/constants';
+
+export const generateBOCWAregistrationPDFtemplate = (data: {
+    registrationNumber: any,
+    registrationDate: any,
+    officeName: any,
+    subdivision: any,
+    officeAddress: any,
+    establishmentName: any,
+    postalAddress: any,
+    establishmentAddress: any,
+    employerAddress: any,
+    permanentAddress: any,
+    natureOfWork: any,
+    maxWorkers: any,
+    startDate: any,
+    endDate: any,
+    ifsc: any,
+    transactionId: any,
+    amount: any,
+    transactionDate: any,
+    postingAddress: any,
+    amendmentList: any,
+}, qrBase64: string) => {
+    return `
+    <!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .page {
+            width: 210mm;
+            height: 297mm;
+            position: relative;
+            font-family: "Times New Roman", serif;
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 6mm;
+        }
+
+        .table td {
+            border: 1px solid #000;
+            padding: 6px;
+            vertical-align: top;
+            font-size: 12px;
+        }
+
+        .header {
+            text-align: center;
+        }
+
+        .footerNote {
+            position: absolute;
+            /* bottom: 20; */
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-size: 14px;
+            font-weight: bolder;
+            margin-top: 12mm;
+        }
+
+        .signature {
+            text-align: center;
+            font-style: italic;
+            position: absolute;
+            right: 0;
+            bottom: 10mm;
+            line-height: 30px;
+            font-size: 13px;
+        }
+
+        .signaturePage3 {
+            text-align: center;
+            font-style: italic;
+            /* position: absolute; */
+            right: 0;
+            bottom: 0mm;
+            line-height: 30px;
+            font-size: 13px;
+        }
+
+        .signaturePage4 {
+            text-align: center;
+            font-style: italic;
+            /* position: absolute; */
+            right: 0;
+            bottom: 0mm;
+            line-height: 30px;
+            font-size: 13px;
+        }
+
+        .pageNumber {
+            text-align: right;
+            font-style: italic;
+            font-size: 12px;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- ================= PAGE 1 ================= -->
+
+    <div class="page" style="page-break-after:always">
+
+        <div style="position:absolute; top:20mm; left:20mm; right:20mm; bottom:20mm;">
+
+
+            <!-- EMBLEM + QR -->
+
+            <table style="width:100%">
+                <tr>
+
+                    <td style="width:70%;text-align:center">
+                        <img src="${IMAGE_BASE}emblem.png" style="height:22mm; margin-left:50mm">
+                    </td>
+
+                    <td style="text-align:right">
+                        <img src="${IMAGE_BASE}qr.png" style="height:25mm">
+                    </td>
+
+                </tr>
+            </table>
+
+
+            <!-- HEADER -->
+
+            <div class="header" style="font-size:18px;font-weight:bold;margin-top:2mm">
+                GOVERNMENT OF WEST BENGAL
+            </div>
+
+            <div class="header" style="font-size:15px;margin-top:2mm">
+                <!-- ${data.officeName}, ${data.subdivision} -->
+                OFFICE OF THE LABOUR COMMISSIONER EL & MW SECTION, KOLKATA
+            </div>
+
+            <div class="header" style="font-style:italic; font-size:14px;margin-top:2mm;line-height: 20px;">
+                <!-- ${data.officeAddress} -->
+                6, Church Lane, 3rd Floor, Kolkata-700001 Telefax: (033) 2248-5721/(033) 2262-7827 Email:
+                dlcelmw@gmail.com
+            </div>
+
+
+            <div class="header" style="font-size:20px;font-weight:bold;margin-top:15mm">
+                FORM II
+            </div>
+
+            <div class="header" style="font-size:12px;">
+                [ See Rule 24(1) ]
+            </div>
+
+
+            <div class="header" style="font-size:18px;font-weight:bold;text-decoration:underline;margin-top:6mm">
+                CERTIFICATE OF REGISTRATION
+            </div>
+
+
+            <!-- REGISTRATION DETAILS -->
+
+            <div style="margin-top:15mm;font-size:14px;">
+
+                <!-- <b><i>Registration No. : ${data.registrationNumber}</i></b> -->
+                <b><i>Registration No. : KOL01/BCR/000209</i></b>
+
+                <span style="float:right">
+                    <!-- <b><i>Date : ${data.registrationDate}</i></b> -->
+                    <b><i>Date : 02nd Mar, 2026</i></b>
+                </span>
+
+            </div>
+
+            <div style="clear:both"></div>
+
+
+            <!-- INTRO TEXT -->
+
+            <div style="margin-top:6mm;text-align:justify;font-style:italic;font-size:14px;line-height:20px;">
+
+                A Certificate of Registration is hereby granted under Sub-section (3) of Section 7 of the Building and
+                other Construction Workers' (Regulation of Employment and Conditions of Service) Act, 1996 and the rules
+                made thereunder to
+
+                <!-- <strong>M/s ${data.establishmentName}</strong>, having the following particulars subject to conditions
+                laid down in the Annexure: -->
+                <strong>M/s GROTECH LANDSCAPE DEVELOPERS PRIVATE LIMITED</strong>, having the following particulars
+                subject to conditions
+                laid down in the Annexure:
+
+            </div>
+
+
+
+            <!-- TABLE -->
+
+            <table class="table">
+
+                <tr>
+
+                    <td style="width:5%">1</td>
+
+                    <td style="width:45%;line-height: 18px;">
+                        Postal Address / location where building or other construction work to be carried on by the
+                        Employer
+                    </td>
+
+                    <td style="line-height: 18px;">
+                        <!-- ${data.postalAddress} -->
+                        3rd FLOOR 80 UTTAR PANCHANAN GRAM VIP NAGAR , Ward.108, PS - Anandapur, Kolkata- 700100
+
+                        <br><br>
+                        <!-- ${data.establishmentAddress} -->
+                        GROTECH LANDSCAPE DEVELOPERS PRIVATE LIMITED
+                        3rd FLOOR 80 UTTAR PANCHANAN GRAM VIP NAGAR
+                        WARD 108 ANANDAPUR KOLKATA 700100,
+                        Ward.108, PS - Anandapur,
+                        Kolkata- 700100
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>2</td>
+
+                    <td style="line-height: 18px;">
+                        Name and Addresses of Employer including location of the building and other construction work
+                    </td>
+
+                    <td style="line-height: 18px;">
+                        <!-- ${data.employerAddress} -->
+                        AVANISH DUBEY
+                        3rd FLOOR 80 UTTAR PANCHANAN GRAM VIP NAGAR ,
+                        Ward.108, PS - Anandapur,
+                        Kolkata- 700100
+                    </td>
+
+                </tr>
+
+            </table>
+
+
+
+            <!-- QR + SIGN -->
+
+            <div style="position:relative;height:40mm;margin-top:6mm">
+
+                <!-- <img src="${qrBase64}" style="position:absolute;left:0;bottom:0;width:25mm"> -->
+
+                <div class="signature">
+
+                    Signature & Seal<br>
+                    of<br>
+                    Registering Officer<br>
+                    <!-- ${data.postingAddress} -->
+                    Kolkata
+
+                </div>
+
+            </div>
+
+
+
+            <!-- <div class="footerNote">
+
+                **This is system generated certificate and does not require any signature.
+                For authenticity, please scan the QR Code.
+
+            </div> -->
+            <div class="footerNote">
+
+                <div>**This is system generated certificate and does not require any signature.</div>
+
+                <div>For authenticity, please scan the QR Code.</div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- PAGE NUMBER -->
+
+        <div style="position:absolute;bottom:5mm;left:20mm;right:20mm">
+            <div style="border-top:1px solid #000;margin-top:3px"></div>
+            <div class="pageNumber">1 of 4</div>
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= PAGE 2 ================= -->
+
+    <div class="page" style="page-break-before:always">
+
+        <div style="position:absolute;top:20mm;left:20mm;right:20mm;bottom:20mm">
+
+
+            <table class="table">
+
+                <tr>
+                    <td style="width:5%">3</td>
+
+                    <td style="width:45%;line-height: 18px;">
+                        Name and permanent address of the Establishment
+                    </td>
+
+                    <td style="line-height: 18px;">
+                        <!-- ${data.permanentAddress} -->
+                        GROTECH LANDSCAPE DEVELOPERS PRIVATE LIMITED
+                        3rd FLOOR 80 UTTAR PANCHANAN GRAM VIP NAGAR
+                        WARD NO 108,
+                        Ward.108, PS - Anandapur,
+                        Kolkata- 700100
+                    </td>
+                </tr>
+
+
+                <tr>
+
+                    <td>4</td>
+
+                    <td style="line-height: 18px;">
+                        Nature of work in which building workers are employed or are to be employed
+                    </td>
+
+                    <td style="line-height: 18px;">
+                        <!-- ${data.natureOfWork} -->
+                        LANDSCAPE WORK
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>5</td>
+
+                    <td style="line-height: 18px;">
+                        Maximum number of building workers to be employed on any day by the employer
+                    </td>
+
+                    <td style="line-height: 18px;">
+                        <!-- ${data.maxWorkers} -->
+                        50
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>6</td>
+
+                    <td style="line-height: 18px;">
+                        Probable date of commencement and completion of work
+                    </td>
+
+                    <td style="line-height: 18px;">
+                        <!-- ${data.startDate} to ${data.endDate} -->
+                        01st Jan, 2026 to 31st Dec, 2026
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>7</td>
+
+                    <td style="line-height: 18px;">
+                        Other particulars relevant to the employment of building workers
+                    </td>
+
+                    <td style="line-height: 18px;">
+
+                        <!-- IFSC Code : ${data.ifsc} -->
+                        IFSC Code : - 6185847521825
+
+                        <br>
+
+                        <!-- Bank Transaction Id : ${data.transactionId} -->
+                        Bank Transaction Id :- EODB2963566296110641
+
+                        <br>
+
+                        <!-- Total Amount : ₹ ${data.amount} -->
+                        Total Amount :- ₹ 500
+
+                        <br>
+
+                        <!-- Transaction Date : ${data.transactionDate} -->
+                        Transaction Date :- 02/03/2026 11:52:56
+
+                    </td>
+
+                </tr>
+
+            </table>
+
+
+
+            <div style="position:relative;height:40mm;margin-top:35mm">
+
+                <!-- <img src="${qrBase64}" style="position:absolute;left:0;bottom:0;width:25mm"> -->
+                <img src="${IMAGE_BASE}qr.png"
+                    style="position:absolute;left:0;bottom:0;width:38mm">
+
+                <div style="position:absolute;right:0;bottom:3mm;" class="signature">
+
+                    Signature & Seal<br>
+                    of<br>
+                    Registering Officer<br>
+                    <!-- ${data.postingAddress} -->
+                    Kolkata
+
+                </div>
+
+            </div>
+
+
+
+            <div class="footerNote" style="margin-top:99mm;">
+
+                <div>**This is system generated certificate and does not require any signature.</div>
+
+                <div>For authenticity, please scan the QR Code.</div>
+
+            </div>
+
+
+        </div>
+
+
+        <div style="position:absolute;bottom:2mm;left:20mm;right:20mm">
+            <div style="border-top:1px solid #000;margin-top:3px"></div>
+            <div class="pageNumber">2 of 4</div>
+        </div>
+
+    </div>
+
+
+
+
+    <!-- ================= PAGE 3 ================= -->
+
+    <div class="page" style="page-break-before:always">
+
+        <div style="position:absolute;top:25mm;left:20mm;right:20mm">
+
+            <div style="text-align:center;font-size:20px;font-weight:bold;text-decoration:underline">
+                ANNEXURE
+            </div>
+
+
+            <div style="margin-top:15mm;font-size:13px;">
+
+                The registration granted hereinabove is subject to the following conditions, namely:-
+
+            </div>
+
+
+            <div style="margin-top:10mm;line-height:8mm;font-size:13px;">
+
+                (1). The certificate of registration shall be non-transferable.
+
+                <br><br>
+
+                (2). The number of workmen employed or building workers in the establishment shall not exceed the
+                maximum number specified.
+
+                <br><br>
+
+                (3). Save or otherwise provided in these rules, the fees paid for the grant of registration certificate
+                shall be nonrefundable.
+
+                <br><br>
+
+                (4). The rates of wages payable to building workers by the employer shall not be less than the rates
+                prescribed under the
+                Minimum Wages Act, 1948 (II of 1948) for such employment where applicable, and where the rates have been
+                fixed by
+                agreement, settelment or award, not less than the rates so fixed, and
+
+                <br><br>
+
+                (5). The employer shall comply with the provisions of the Act and the rules made thereunder.
+
+            </div>
+
+
+            <div style="display:flex;justify-content:end;">
+                <div style="margin-top:40mm;text-align:center" class="signaturePage3">
+
+                    Signature & Seal<br>
+                    of<br>
+                    Registering Officer<br>
+                    <!-- ${data.postingAddress} -->
+                    Kolkata
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div style="position:absolute;bottom:5mm;left:20mm;right:20mm">
+            <div style="border-top:1px solid #000;margin-top:3px"></div>
+            <div class="pageNumber">3 of 4</div>
+        </div>
+
+    </div>
+
+
+
+
+    <!-- ================= PAGE 4 ================= -->
+
+    <div class="page" style="page-break-before:always">
+
+        <div style="position:absolute;top:25mm;left:20mm;right:20mm">
+
+            <div style="text-align:center;font-size:20px;font-weight:bold;text-decoration:underline">
+                ANNEXURE I
+            </div>
+
+
+            <div style="margin-top:20mm">
+
+                <!-- ${data.amendmentList} -->
+
+            </div>
+
+            <div style="display:flex;justify-content:end;">
+                <div style="margin-top:40mm" class="signaturePage4">
+
+                    Signature & Seal<br>
+                    of<br>
+                    Registering Officer<br>
+                    <!-- ${data.postingAddress} -->
+                    Kolkata
+
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <div style="position:absolute;bottom:5mm;left:20mm;right:20mm">
+            <div style="border-top:1px solid #000;margin-top:3px"></div>
+            <div class="pageNumber">4 of 4</div>
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>
+
+`;
+};

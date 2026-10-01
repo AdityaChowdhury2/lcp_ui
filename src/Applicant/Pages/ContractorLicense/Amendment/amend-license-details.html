@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amend License Details</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #ececec;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid #ccc;
+        }
+
+        .page-title {
+            text-align: center;
+            font-weight: bold;
+            padding: 15px;
+            border-bottom: 1px solid #ccc;
+            text-transform: uppercase;
+            color: #0b2c48;
+        }
+
+        .blue-banner {
+            background: #337ab7;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .blue-banner .value {
+            color: #d3e1ec;
+            font-weight: bold;
+        }
+
+        .section-header {
+            background: #d3e1ec;
+            border: 1px solid #ccc;
+            padding: 10px 15px;
+            font-weight: bold;
+            color: #1a3a52;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .edit-btn {
+            color: #337ab7;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .section-content {
+            border-left: 1px solid #ccc;
+            border-right: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: 40% 60%;
+            border-bottom: 1px solid #eee;
+        }
+
+        .row:nth-child(even) {
+            background: #f5f5f5;
+        }
+
+        .label {
+            padding: 10px;
+            font-weight: bold;
+        }
+
+        .value {
+            padding: 10px;
+        }
+
+        .sub-banner {
+            background: #3c4e5a;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        .upload-section {
+            background: white;
+            border: 1px solid #ccc;
+            border-top: none;
+            padding: 15px;
+        }
+
+        .upload-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .upload-box {
+            border: 1px dashed #1D5A89;
+            background: #f8fbfd;
+            padding: 15px;
+        }
+
+        .upload-box label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .file-btn {
+            background: #1D5A89;
+            color: white;
+            padding: 8px 15px;
+            display: inline-block;
+            border-radius: 4px;
+        }
+
+        .declaration {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .footer-buttons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .save-btn {
+            background: #5bc0de;
+            color: white;
+            border: 1px solid #46b8da;
+            padding: 10px 30px;
+            cursor: pointer;
+        }
+
+        .back-btn {
+            background: #f5f5f5;
+            color: #333;
+            border: 1px solid #ccc;
+            padding: 10px 30px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card">
+
+            <div class="page-title">
+                APPLICATION FOR AMMENDMENT OF LICENSE UNDER THE CONTRACT LABOUR (R&A) ACT, 1970
+            </div>
+
+            <div class="blue-banner">
+                <div>
+                    Form-V/Reference Number:
+                    <span class="value">001234</span>
+                </div>
+
+                <div style="margin-top:8px;">
+                    License Number:
+                    <span class="value">LIC-2025-0001</span>
+                </div>
+
+                <div style="margin-top:8px;">
+                    Issue Date:
+                    <span class="value">01-01-2025</span>
+
+                    &nbsp;&nbsp;&nbsp;
+
+                    Valid Upto:
+                    <span class="value">31-12-2025</span>
+                </div>
+            </div>
+
+            <!-- Section 1 -->
+            <div class="section-header">
+                <span>1. Information Given by Principal Employer</span>
+            </div>
+
+            <div class="section-content">
+                <div class="row">
+                    <div class="label">Principal Employer Name</div>
+                    <div class="value">ABC Industries Ltd.</div>
+                </div>
+
+                <div class="row">
+                    <div class="label">Address</div>
+                    <div class="value">Kolkata, West Bengal</div>
+                </div>
+            </div>
+
+            <!-- Section 2 -->
+            <div class="section-header">
+                <span>2. Name & Address of the Contractor (Official Information)</span>
+                <span class="edit-btn">Edit</span>
+            </div>
+
+            <div class="section-content">
+                <div class="row">
+                    <div class="label">Contractor Name</div>
+                    <div class="value">XYZ Contractor Services</div>
+                </div>
+
+                <div class="row">
+                    <div class="label">Contractor Address</div>
+                    <div class="value">Salt Lake, Kolkata</div>
+                </div>
+            </div>
+
+            <!-- Section 3 -->
+            <div class="section-header">
+                <span>3. Contractor Labour and Worksite Details</span>
+                <span class="edit-btn">Edit</span>
+            </div>
+
+            <div class="section-content">
+                <div class="row">
+                    <div class="label">Worksite Address</div>
+                    <div class="value">Sector V, Salt Lake</div>
+                </div>
+
+                <div class="row">
+                    <div class="label">Maximum Labour</div>
+                    <div class="value">500</div>
+                </div>
+            </div>
+
+            <!-- Section 4 -->
+            <div class="section-header">
+                <span>4. Particular of Contract Labour</span>
+                <span class="edit-btn">Edit</span>
+            </div>
+
+            <div class="section-content">
+
+                <div class="row">
+                    <div class="label">Category</div>
+                    <div class="value">Skilled Labour</div>
+                </div>
+
+                <div class="sub-banner">
+                    Wages Details
+                </div>
+
+                <div class="row">
+                    <div class="label">Skilled Rate</div>
+                    <div class="value">₹750/day</div>
+                </div>
+
+                <div class="row">
+                    <div class="label">Unskilled Rate</div>
+                    <div class="value">₹500/day</div>
+                </div>
+
+                <div class="sub-banner">
+                    Leave Details
+                </div>
+
+                <div class="row">
+                    <div class="label">Annual Leave</div>
+                    <div class="value">12 Days</div>
+                </div>
+
+                <div class="row">
+                    <div class="label">Casual Leave</div>
+                    <div class="value">7 Days</div>
+                </div>
+
+                <div class="sub-banner">
+                    Uploaded Documents
+                </div>
+
+                <div class="row">
+                    <div class="label">Work Order</div>
+                    <div class="value">
+                        <a href="#">View Document</a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="label">Trade License</div>
+                    <div class="value">
+                        <a href="#">View Document</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Upload Section -->
+
+        <div class="upload-section">
+
+            <div class="upload-grid">
+
+                <div class="upload-box">
+                    <label>Work-order Document</label>
+                    <input type="file" accept=".pdf">
+                </div>
+
+                <div class="upload-box">
+                    <label>Form V</label>
+                    <input type="file" accept=".pdf">
+                </div>
+
+                <div class="upload-box">
+                    <label>Trade License</label>
+                    <input type="file" accept=".pdf">
+                </div>
+
+                <div class="upload-box">
+                    <label>Other Document</label>
+                    <input type="file" accept=".pdf">
+                </div>
+
+            </div>
+
+            <div class="declaration">
+                <input type="checkbox">
+                Declaration: I hereby declare that the details given above are correct to the best of my knowledge and
+                belief.
+            </div>
+
+            <div class="footer-buttons">
+                <button class="save-btn">Save</button>
+                <button class="back-btn">Back</button>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

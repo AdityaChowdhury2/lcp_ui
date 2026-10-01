@@ -1,0 +1,7 @@
+@media (min-width: 312px) and (max-width: 575px) {
+  .font {
+    text-wrap: auto;
+    text-align: left;
+    padding: 5px;
+  }
+}
