@@ -3,8 +3,8 @@ export const FRONTEND_BASE: string = import.meta.env.VITE_FRONTEND_BASE_URL;
 // export const BASE_URL: string = import.meta.env.BASE_URL || "";
 export const DOMAIN_NAME: string = import.meta.env.VITE_DOMAIN_NAME;
 
-export const IMAGE_BASE: string = `/images/`;
-// export const IMAGE_BASE: string = `/lc/images/`;
+// export const IMAGE_BASE: string = `/images/`;
+export const IMAGE_BASE: string = `/lc/images/`;
 
 export const AUTH_STORAGE_KEY = "lc_portal_auth";
 

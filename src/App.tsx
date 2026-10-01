@@ -1159,8 +1159,8 @@ const App = () => {
 
   return (
     <>
-      {/* <Router basename="/lc"> */}
-      <Router>
+       <Router basename="/lc"> 
+      {/* <Router> */}
         <ScrollToTop />
         <Routes>
           {/* Public site layout stays unprotected */}
